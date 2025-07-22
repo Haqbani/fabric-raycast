@@ -1,0 +1,232 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "fabric-ai",
+  "title": "Fabric AI",
+  "description": "Run Fabric AI patterns directly from Raycast",
+  "icon": "icon.png",
+  "author": "fabric-ai",
+  "categories": [
+    "Productivity",
+    "Developer Tools"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "browse-patterns",
+      "title": "Browse Fabric Patterns",
+      "subtitle": "Search and execute AI patterns",
+      "description": "Browse all available Fabric AI patterns with descriptions",
+      "mode": "view"
+    },
+    {
+      "name": "run-pattern",
+      "title": "Run Pattern",
+      "subtitle": "Execute a Fabric pattern on text",
+      "description": "Run any Fabric pattern on clipboard or custom input",
+      "mode": "view"
+    },
+    {
+      "name": "summarize",
+      "title": "Summarize Text",
+      "subtitle": "Create a summary using AI",
+      "description": "Summarize clipboard content or selected text",
+      "mode": "no-view"
+    },
+    {
+      "name": "extract-wisdom",
+      "title": "Extract Wisdom",
+      "subtitle": "Extract key insights from text",
+      "description": "Extract wisdom and insights from clipboard content",
+      "mode": "no-view"
+    },
+    {
+      "name": "improve-writing",
+      "title": "Improve Writing",
+      "subtitle": "Enhance your text with AI",
+      "description": "Improve the quality of your writing",
+      "mode": "no-view"
+    },
+    {
+      "name": "analyze-claims",
+      "title": "Analyze Claims",
+      "subtitle": "Fact-check and analyze claims",
+      "description": "Analyze claims in the provided text",
+      "mode": "no-view"
+    },
+    {
+      "name": "create-quiz",
+      "title": "Create Quiz",
+      "subtitle": "Generate quiz questions",
+      "description": "Create quiz questions from educational content",
+      "mode": "no-view"
+    },
+    {
+      "name": "write-essay",
+      "title": "Write Essay",
+      "subtitle": "Generate an essay",
+      "description": "Generate an essay",
+      "mode": "no-view"
+    },
+    {
+      "name": "extract-article-wisdom",
+      "title": "Extract Article Wisdom",
+      "subtitle": "Extract wisdom from articles",
+      "description": "Extract wisdom from articles",
+      "mode": "no-view"
+    },
+    {
+      "name": "create-summary",
+      "title": "Create Summary",
+      "subtitle": "Create detailed summary",
+      "description": "Create detailed summary",
+      "mode": "no-view"
+    },
+    {
+      "name": "analyze-paper",
+      "title": "Analyze Paper",
+      "subtitle": "Analyze research paper",
+      "description": "Analyze research paper",
+      "mode": "no-view"
+    },
+    {
+      "name": "create-mermaid-visualization",
+      "title": "Create Mermaid Diagram",
+      "subtitle": "Generate Mermaid visualization",
+      "description": "Generate Mermaid visualization",
+      "mode": "no-view"
+    },
+    {
+      "name": "extract-insights",
+      "title": "Extract Insights",
+      "subtitle": "Extract key insights",
+      "description": "Extract key insights",
+      "mode": "no-view"
+    },
+    {
+      "name": "create-security-update",
+      "title": "Create Security Update",
+      "subtitle": "Generate security update",
+      "description": "Generate security update",
+      "mode": "no-view"
+    },
+    {
+      "name": "write-latex",
+      "title": "Write Latex",
+      "subtitle": "Generate LaTeX code",
+      "description": "Generate LaTeX code",
+      "mode": "no-view"
+    },
+    {
+      "name": "analyze-threat-report",
+      "title": "Analyze Threat Report",
+      "subtitle": "Analyze security threats",
+      "description": "Analyze security threats",
+      "mode": "no-view"
+    },
+    {
+      "name": "create-presentation",
+      "title": "Create Presentation",
+      "subtitle": "Generate presentation outline",
+      "description": "Generate presentation outline",
+      "mode": "no-view"
+    },
+    {
+      "name": "extract-predictions",
+      "title": "Extract Predictions",
+      "subtitle": "Extract predictions from text",
+      "description": "Extract predictions from text",
+      "mode": "no-view"
+    },
+    {
+      "name": "create-keynote",
+      "title": "Create Keynote",
+      "subtitle": "Generate keynote outline",
+      "description": "Generate keynote outline",
+      "mode": "no-view"
+    },
+    {
+      "name": "summarize-newsletter",
+      "title": "Summarize Newsletter",
+      "subtitle": "Summarize newsletter content",
+      "description": "Summarize newsletter content",
+      "mode": "no-view"
+    },
+    {
+      "name": "create-video-summary",
+      "title": "Create Video Summary",
+      "subtitle": "Summarize video content",
+      "description": "Summarize video content",
+      "mode": "no-view"
+    },
+    {
+      "name": "extract-references",
+      "title": "Extract References",
+      "subtitle": "Extract citations and references",
+      "description": "Extract citations and references",
+      "mode": "no-view"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.101.1",
+    "@raycast/utils": "^2.2.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.8",
+    "@types/node": "20.8.10",
+    "@types/react": "^18.3.3",
+    "eslint": "^8.51.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  },
+  "preferences": [
+    {
+      "name": "defaultModel",
+      "title": "Default AI Model",
+      "description": "Default model to use for Fabric patterns",
+      "type": "textfield",
+      "required": false,
+      "placeholder": "gpt-4"
+    },
+    {
+      "name": "temperature",
+      "title": "Temperature",
+      "description": "Controls randomness in AI responses (0.0-2.0)",
+      "type": "textfield",
+      "required": false,
+      "default": "0.7"
+    },
+    {
+      "name": "fabricPath",
+      "title": "Fabric CLI Path",
+      "description": "Custom path to Fabric CLI (leave empty for default)",
+      "type": "textfield",
+      "required": false,
+      "placeholder": "fabric"
+    },
+    {
+      "name": "defaultOutputMode",
+      "title": "Default Output Mode",
+      "description": "Where to send pattern output by default",
+      "type": "dropdown",
+      "required": false,
+      "default": "clipboard",
+      "data": [
+        {
+          "title": "Copy to Clipboard",
+          "value": "clipboard"
+        },
+        {
+          "title": "Replace Selection",
+          "value": "replace"
+        }
+      ]
+    }
+  ]
+}
